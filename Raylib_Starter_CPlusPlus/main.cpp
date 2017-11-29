@@ -6,10 +6,24 @@
 //  Copyright © 2017 Braeden Foster. All rights reserved.
 //
 
-#include <iostream>
+#include "raylib.h"
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
-    return 0;
+int main() {
+    //Initialise
+    int screenWidth = 800;
+    int screenHeight = 450;
+    
+    InitWindow(screenWidth, screenHeight, "Raylib - Empty Project");
+    
+    //Main game loop
+    while (!WindowShouldClose()) {
+        //Update game loop
+        
+        BeginDrawing(); //start
+            ClearBackground(RAYWHITE); //Every frame clear background with white
+            DrawText("Start your game here...", 190, 200, 20, LIGHTGRAY);
+        EndDrawing();//end
+    }
+    //De-Initialise
+    CloseWindow();
 }
